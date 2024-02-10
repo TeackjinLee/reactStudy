@@ -20,17 +20,26 @@ import React from 'react';
 // }
 
 //2.4.3 if 문 대신 조건무 연산자
+// function App() {
+//   const name = '리액트';
+//   return (
+//     <div>
+//       {name === '리액트' ? (
+//         <h1>리액트 입니다.</h1>
+//       ) : (
+//         <h2>리액트가 아닙니다.</h2>
+//       )}
+//     </div>
+//   )
+// }
+
+// 2.4.4 AND 연산자(&&)를 사용한 조건부 렌더링
 function App() {
-  const name = '리액트';
-  return (
-    <div>
-      {name === '리액트' ? (
-        <h1>리액트 입니다.</h1>
-      ) : (
-        <h2>리액트가 아닙니다.</h2>
-      )}
-    </div>
-  )
+  const name = '뤼왝트';
+
+  // return <div>{name === '리액트' ? <h1>리액트 입니다.</h1> : null }</div>
+  return <div>{name === '리액트' && <h1>리액트 입니다.</h1>}</div>
+
 }
 
 export default App;
