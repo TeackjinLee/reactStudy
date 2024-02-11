@@ -1,6 +1,6 @@
 // import React, {Fragment} from 'react';
-import React from 'react';
-import './App.css'
+import React from "react";
+import "./App.css";
 
 // function App() {
 //   const name = '리액트';
@@ -12,7 +12,7 @@ import './App.css'
 //     //   <h1>리액트 안녕!</h1>
 //     //   <h1>리액트 안녕!</h1>
 //     // </div>
-    
+
 //     <>
 //       <h1>{name} 안녕!</h1>
 //       <h2>잘 작동하니?</h2>
@@ -71,12 +71,28 @@ import './App.css'
 // }
 
 // 2.4.8 꼭 닫아야 하는 태그
+// function App() {
+//   const name = '리액트';
+//   return (
+//     <>
+//       <div className='react'>{name}</div>
+//       <input /> {/** self-closing */}
+//     </>
+//   );
+// }
+
+// 2.4.9 주석
 function App() {
-  const name = '리액트';
+  const name = "리액트";
   return (
     <>
-      <div className='react'>{name}</div>
-      <input /> {/** self-closing */}
+      {/* 주석은 이렇게 작성합니다. */}
+      <div
+        className="react" // 시작 태그를 여러 줄로 작성하게 된다면 여기에 주석을 작성할 수 있습니다.
+      >
+        {name}
+      </div>
+      // 하지만 이런 주석아나 /* 이런 주석은 페이지에 그대로 나타나게 됩니다. */
     </>
   );
 }
