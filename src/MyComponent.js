@@ -28,5 +28,9 @@ const MyComponent = (props) => {
   );
 };
 
+MyComponent.defaultProps = {
+  name: "기본 이름",
+};
+
 // 3.2.3.1 모듈 내보내기(export)
 export default MyComponent;
