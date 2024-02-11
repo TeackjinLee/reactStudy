@@ -1,17 +1,24 @@
 // import React, {Fragment} from 'react';
-import React, { Component } from "react";
+// import React, { Component } from "react";
+import React from "react";
+import MyComponent from "./MyComponent";
+
+// 3.2.3.2 모듈 불러오기
+const App = () => {
+  return <MyComponent />;
+};
 
 // 3.1 클래스형 컴포넌트
 // function App() {
 //   const name = "리액트";
 //   return <div className="react">{name}</div>;
 // }
-class App extends Component {
-  render() {
-    const name = "react";
-    return <div className="react">{name}</div>;
-  }
-}
+// class App extends Component {
+//   render() {
+//     const name = "react";
+//     return <div className="react">{name}</div>;
+//   }
+// }
 
 // function App() {
 //   const name = '리액트';
