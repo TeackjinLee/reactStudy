@@ -1,5 +1,25 @@
 //3.2.2 코드 작성하기
 import React from "react";
+//3.3.6 propTypes를 통한 props 검증
+import PropTypes from "prop-types";
+
+const MyComponent = ({ name, children }) => {
+  return (
+    <div>
+      안녕하세요, 제 이름은 {name}입니다. <br />
+      children 값은 {children}
+      입니다.
+    </div>
+  );
+};
+
+MyComponent.defaultProps = {
+  name: "기본 이름",
+};
+
+MyComponent.propTypes = {
+  name: PropTypes.string,
+};
 
 // const MyComponent = () => {
 //   return <div>나의 새롭고 멋진 컴포넌트</div>;
@@ -39,20 +59,6 @@ import React from "react";
 //     </div>
 //   );
 // };
-
-const MyComponent = ({ name, children }) => {
-  return (
-    <div>
-      안녕하세요, 제 이름은 {name}입니다. <br />
-      children 값은 {children}
-      입니다.
-    </div>
-  );
-};
-
-MyComponent.defaultProps = {
-  name: "기본 이름",
-};
 
 // 3.2.3.1 모듈 내보내기(export)
 export default MyComponent;
