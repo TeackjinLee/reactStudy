@@ -3,10 +3,17 @@
 import React from "react";
 import MyComponent from "./MyComponent";
 
-// 3.2.3.2 모듈 불러오기
+// 3.3.2 컴포넌트를 사용할 때 props 값 지정하기
 const App = () => {
-  return <MyComponent />;
+  return <MyComponent name="React" />;
 };
+
+// 3.3 props
+
+// 3.2.3.2 모듈 불러오기
+// const App = () => {
+//   return <MyComponent />;
+// };
 
 // 3.1 클래스형 컴포넌트
 // function App() {
