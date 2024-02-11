@@ -5,8 +5,10 @@ import MyComponent from "./MyComponent";
 
 // 3.3.2 컴포넌트를 사용할 때 props 값 지정하기
 const App = () => {
-  return <MyComponent name="React" />;
+  return <MyComponent />;
 };
+
+//3.3.3 props 기본값 설정: defaultProps
 
 // 3.3 props
 
