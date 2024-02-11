@@ -51,22 +51,33 @@ import './App.css'
 // }
 
 // 2.4.6 인라인 스타일링
+// function App() {
+//   const name = '리액트';
+//   return (
+//     // <div
+//     //   style = {{
+//     //     // background-color는 backgroundColor와 같이 -가 사라지고 카멘 표기법으로 작성됩니다.
+//     //     backgroundColor : 'black',
+//     //     color : 'aqua',
+//     //     fontSize : '48px', // font-size -> fontSize
+//     //     fontWeight : 'bold', // font-weight -> fontWeight
+//     //     padding : 16 // 단위를 생략하면 px로 지정됩니다.
+//     //   }}
+//     // >
+//     <div className='react'>
+//       {name}
+//     </div>
+//   );
+// }
+
+// 2.4.8 꼭 닫아야 하는 태그
 function App() {
   const name = '리액트';
   return (
-    // <div
-    //   style = {{
-    //     // background-color는 backgroundColor와 같이 -가 사라지고 카멘 표기법으로 작성됩니다.
-    //     backgroundColor : 'black',
-    //     color : 'aqua',
-    //     fontSize : '48px', // font-size -> fontSize
-    //     fontWeight : 'bold', // font-weight -> fontWeight
-    //     padding : 16 // 단위를 생략하면 px로 지정됩니다.
-    //   }}
-    // >
-    <div className='react'>
-      {name}
-    </div>
+    <>
+      <div className='react'>{name}</div>
+      <input /> {/** self-closing */}
+    </>
   );
 }
 
