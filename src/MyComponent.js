@@ -10,12 +10,22 @@ import React from "react";
 // };
 
 // 3.3.3 props 기본값 설정: defaultProps
-const MyComponent = (props) => {
-  return <div>안녕하세요, 제 이름은 {props.name} 입니다.</div>;
-};
+// const MyComponent = (props) => {
+//   return <div>안녕하세요, 제 이름은 {props.name} 입니다.</div>;
+// };
 
-MyComponent.defaultProps = {
-  name: "기본 이름",
+// MyComponent.defaultProps = {
+//   name: "기본 이름",
+// };
+
+const MyComponent = (props) => {
+  return (
+    <div>
+      안녕하세요, 제이름은 {props.name}입니다. <br />
+      children 값은 {props.children}
+      입니다.
+    </div>
+  );
 };
 
 // 3.2.3.1 모듈 내보내기(export)
