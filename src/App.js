@@ -1,16 +1,22 @@
 // import React, {Fragment} from 'react';
 // import React, { Component } from "react";
 import React from "react";
-import MyComponent from "./MyComponent";
+// import MyComponent from "./MyComponent";
+import Counter from "./Counter";
+
+// 3.4.1 클래스형 컴포넌트 의 state
+const App = () => {
+  return <Counter />;
+};
 
 //3.3.4 태그 사이의 내용을 보여 주는 children
-const App = () => {
-  return (
-    <MyComponent name="React" favoriteNumber={1}>
-      리액트
-    </MyComponent>
-  );
-};
+// const App = () => {
+//   return (
+//     <MyComponent name="React" favoriteNumber={1}>
+//       리액트
+//     </MyComponent>
+//   );
+// };
 
 // 3.3.2 컴포넌트를 사용할 때 props 값 지정하기
 // const App = () => {
