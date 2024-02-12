@@ -2,12 +2,18 @@
 // import React, { Component } from "react";
 import React from "react";
 // import MyComponent from "./MyComponent";
-import Counter from "./Counter";
+// import Counter from "./Counter";
+import Say from "./Say";
+
+// 3.4.2.2 useState 사용하기
+const App = () => {
+  return <Say />;
+};
 
 // 3.4.1 클래스형 컴포넌트 의 state
-const App = () => {
-  return <Counter />;
-};
+// const App = () => {
+//   return <Counter />;
+// };
 
 //3.3.4 태그 사이의 내용을 보여 주는 children
 // const App = () => {
