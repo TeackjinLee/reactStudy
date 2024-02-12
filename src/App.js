@@ -3,12 +3,18 @@
 import React from "react";
 // import MyComponent from "./MyComponent";
 // import Counter from "./Counter";
-import Say from "./Say";
+// import Say from "./Say";
+import EventPractice from "./EventPractice";
+
+// 4.2.1.2 App.js에서 EventPractice 렌더링
+const App = () => {
+  return <EventPractice />;
+};
 
 // 3.4.2.2 useState 사용하기
-const App = () => {
-  return <Say />;
-};
+// const App = () => {
+//   return <Say />;
+// };
 
 // 3.4.1 클래스형 컴포넌트 의 state
 // const App = () => {
