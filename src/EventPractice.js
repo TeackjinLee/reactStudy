@@ -7,26 +7,38 @@ class EventPractice extends Component {
 
   // 4.2.3 임의 메서드 만들기
   // 4.2.3.1 기본방식
-  constructor(props) {
-    super(props);
-    console.log("this");
-    console.log(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.handleChange = this.handleChange.bind(this);
+  //   this.handleClick = this.handleClick.bind(this);
+  // }
 
-  handleChange(e) {
+  // handleChange(e) {
+  //   this.setState({
+  //     message: e.target.value,
+  //   });
+  // }
+
+  // handleClick() {
+  //   alert(this.state.message);
+  //   this.setState({
+  //     message: "",
+  //   });
+  // }
+
+  // 4.2.3.2 Property Intializer Syntax를 사용한 메서드 작성
+  handleChange = (e) => {
     this.setState({
       message: e.target.value,
     });
-  }
+  };
 
-  handleClick() {
+  handleClick = (e) => {
     alert(this.state.message);
     this.setState({
       message: "",
     });
-  }
+  };
 
   render() {
     return (

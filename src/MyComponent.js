@@ -3,6 +3,7 @@ import React, { Component } from "react";
 //3.3.6 propTypes를 통한 props 검증
 import PropTypes from "prop-types";
 
+// 3.3.7 클래스형 컴포넌트에서 props 사용하기
 class MyComponent extends Component {
   static defaultProps = {
     name: "기본 이름",
