@@ -34,16 +34,21 @@ class EventPractice extends Component {
       // message: e.target.value,
       [e.target.name]: e.target.value,
     });
-    console.log("name : " + e.target.name);
-    console.log("value : " + e.target.value);
   };
 
-  handleClick = (e) => {
+  handleClick = () => {
     alert(this.state.username + ": " + this.state.message);
     this.setState({
       username: "",
       message: "",
     });
+  };
+
+  // 4.2.5 onKeyPress 이벤트 핸들링
+  handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      this.handleClick();
+    }
   };
 
   render() {
@@ -68,6 +73,7 @@ class EventPractice extends Component {
           //     });
           //   }}
           onChange={this.handleChange}
+          onKeyPress={this.handleKeyPress}
         />
         {/* 4.2.2.3 버튼을 누를 때 comment 값을 공백으로 설정 */}
         {/* <button
