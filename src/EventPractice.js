@@ -3,6 +3,8 @@ import React, { Component } from "react";
 class EventPractice extends Component {
   state = {
     message: "",
+    // 4.2.4 input 여러개 다루기
+    username: "",
   };
 
   // 4.2.3 임의 메서드 만들기
@@ -29,13 +31,17 @@ class EventPractice extends Component {
   // 4.2.3.2 Property Intializer Syntax를 사용한 메서드 작성
   handleChange = (e) => {
     this.setState({
-      message: e.target.value,
+      // message: e.target.value,
+      [e.target.name]: e.target.value,
     });
+    console.log("name : " + e.target.name);
+    console.log("value : " + e.target.value);
   };
 
   handleClick = (e) => {
-    alert(this.state.message);
+    alert(this.state.username + ": " + this.state.message);
     this.setState({
+      username: "",
       message: "",
     });
   };
@@ -44,6 +50,13 @@ class EventPractice extends Component {
     return (
       <div>
         <h1>이벤트 연습</h1>
+        <input
+          type="text"
+          name="username"
+          placeholder="사용자명"
+          value={this.state.username}
+          onChange={this.handleChange}
+        />
         <input
           type="text"
           name="message"
