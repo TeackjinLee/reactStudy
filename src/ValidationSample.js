@@ -19,12 +19,16 @@ class ValidationSample extends Component {
         this.setState({
             clicked : true,
             validated : this.state.password === '0000'
-        })
+        });
+        // 5.2.3.2 버튼 onClick 이벤트 코드 수정
+        this.input.focus();
     }
     render() {
         return (
             <div>
                 <input
+                    // 5.2.3.1 input에 ref달기
+                    ref={(ref) => this.input=ref}
                     type="password"
                     value={this.state.password}
                     onChange={this.handleChange}
