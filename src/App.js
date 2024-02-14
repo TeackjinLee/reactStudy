@@ -4,11 +4,11 @@ import React from "react";
 // import MyComponent from "./MyComponent";
 // import Counter from "./Counter";
 // import Say from "./Say";
-import EventPractice from "./EventPractice";
+import EventTest from "./EventTest";
 
 // 4.2.1.2 App.js에서 EventPractice 렌더링
 const App = () => {
-  return <EventPractice />;
+  return <EventTest />;
 };
 
 // 3.4.2.2 useState 사용하기
