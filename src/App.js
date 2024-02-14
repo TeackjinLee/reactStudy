@@ -4,12 +4,19 @@ import React from "react";
 // import MyComponent from "./MyComponent";
 // import Counter from "./Counter";
 // import Say from "./Say";
-import EventTest from "./EventTest";
+// import EventPractice from "./EventPractice";
+import ValidationSample from './ValidationSample'
+
+// 5.1.2 App 컴포넌트에서 예제 컴포넌트 렌더링
+const App = () => {
+  return <ValidationSample />;
+}
+
 
 // 4.2.1.2 App.js에서 EventPractice 렌더링
-const App = () => {
-  return <EventTest />;
-};
+// const App = () => {
+//   return <EventPractice />;
+// };
 
 // 3.4.2.2 useState 사용하기
 // const App = () => {
