@@ -12,8 +12,25 @@ const IterationSample = () => {
     const [inputText, setInputText] = useState('');
     const [nextId, setNextId] = useState(5);    // 새로운 항목을 추가할 때 사용할 id
 
+    const onChange = e => setInputText(e.target.value);
+    const onClick = () => {
+        const nextNames = names.concat({
+            id: nextId,
+            text: inputText
+        });
+        setNextId(nextId + 1);  // nextId 값을 1을 더해준다.
+        setNames(nextNames);    // names 값을 업데이트 한다.
+        setInputText('');       // inputText를 비운다
+    }
+
     const nameList = names.map(name => <li key={name.id}>{name.text}</li>);
-    return <ul>{nameList}</ul>
+    return (
+        <>
+            <input value={inputText} onChange={onChange} />
+            <button onClick={onClick}>추가</button>
+            <ul>{nameList}</ul>
+        </>
+        )
 }
 
 // 6.2 데이터 배열을 컴포넌트 배열로 변환하기
