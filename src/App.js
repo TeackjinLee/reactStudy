@@ -2,22 +2,30 @@
 import React, { Component } from "react";
 // import React from "react";
 
-// 5.3.2.2 App 컴포넌트에서 스크롤 박스 컴포넌트 렌더링
-import ScrollBox from "./ ScrollBox";
-
+// 6.2.2 App컴포넌트에서 예제 컴포넌트 렌더링
+import IterationSample from "./IterationSample";
 class App extends Component {
   render() {
-    return (
-      <div>
-        {/* 5.3.4 컴포넌트에 rㄷㄹ달고 내부 메서드 사용 */}
-        <ScrollBox ref={(ref) => this.scrollBox=ref}/>
-        <button onClick={() => this.scrollBox.scrollTopBottom()}>
-           맨 밑으로
-        </button>
-      </div>
-    );
+    return <IterationSample/>
   }
 }
+
+// 5.3.2.2 App 컴포넌트에서 스크롤 박스 컴포넌트 렌더링
+// import ScrollBox from "./ ScrollBox";
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         {/* 5.3.4 컴포넌트에 rㄷㄹ달고 내부 메서드 사용 */}
+//         <ScrollBox ref={(ref) => this.scrollBox=ref}/>
+//         <button onClick={() => this.scrollBox.scrollTopBottom()}>
+//            맨 밑으로
+//         </button>
+//       </div>
+//     );
+//   }
+// }
 
 // import MyComponent from "./MyComponent";
 // import Counter from "./Counter";
