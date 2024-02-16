@@ -1,4 +1,4 @@
-import Reac, {useState} from 'react';
+import React, {useState} from 'react';
 // 6.4 응용
 // 초기상태 설정하기 -> 데이터 추가 기능 구현하기 -> 데이터 제거 기능 구현하기
 // 6.4.1 초기상태 설정하기
@@ -13,6 +13,7 @@ const IterationSample = () => {
     const [nextId, setNextId] = useState(5);    // 새로운 항목을 추가할 때 사용할 id
 
     const onChange = e => setInputText(e.target.value);
+    // 6.4.2 데이터 추가 기능 구현하기
     const onClick = () => {
         const nextNames = names.concat({
             id: nextId,
@@ -23,7 +24,15 @@ const IterationSample = () => {
         setInputText('');       // inputText를 비운다
     }
 
-    const nameList = names.map(name => <li key={name.id}>{name.text}</li>);
+    const onRemove = id => {
+        const nextNames = names.filter(name => name.id !== id);
+        setNames(nextNames);
+    }
+
+    const nameList = names.map(name => 
+        <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+            {name.text}
+        </li>);
     return (
         <>
             <input value={inputText} onChange={onChange} />
