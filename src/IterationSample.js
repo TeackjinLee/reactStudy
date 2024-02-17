@@ -24,6 +24,7 @@ const IterationSample = () => {
         setInputText('');       // inputText를 비운다
     }
 
+    // 6.4.3 데이터 제거 기능 구현하기
     const onRemove = id => {
         const nextNames = names.filter(name => name.id !== id);
         setNames(nextNames);
