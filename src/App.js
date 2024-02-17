@@ -4,6 +4,7 @@ import React, { Component } from "react";
 
 // 7.3.2 App 컴포넌트에서 예제 컴포넌트 사용
 import LifeCycleSample from './LifeCycleSample';
+import ErrorBoundary from "./ErrorBoundary";
 
 // 랜더 색상을 생성합니다.
 function getRandomColor() {
@@ -25,7 +26,9 @@ class App extends Component {
     return (
       <div>
         <button onClick={this.handleClick}>랜덤 색상</button>
-        <LifeCycleSample color={this.state.color}/>
+        <ErrorBoundary>
+          <LifeCycleSample color={this.state.color}/>
+        </ErrorBoundary>
       </div>
     )
   }
