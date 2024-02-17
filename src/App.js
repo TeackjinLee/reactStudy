@@ -2,13 +2,43 @@
 import React, { Component } from "react";
 // import React from "react";
 
-// 6.2.2 App컴포넌트에서 예제 컴포넌트 렌더링
-import IterationSample from "./IterationSample";
+// 7.3.2 App 컴포넌트에서 예제 컴포넌트 사용
+import LifeCycleSample from './LifeCycleSample';
+
+// 랜더 색상을 생성합니다.
+function getRandomColor() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+
 class App extends Component {
+  state = {
+    color : '#000000'
+  }
+
+  handleClick = () => {
+    this.setState({
+      color : getRandomColor()
+    });
+  }
+
   render() {
-    return <IterationSample/>
+    return (
+      <div>
+        <button onClick={this.handleClick}>랜덤 색상</button>
+        <LifeCycleSample color={this.state.color}/>
+      </div>
+    )
   }
 }
+
+
+// 6.2.2 App컴포넌트에서 예제 컴포넌트 렌더링
+// import IterationSample from "./IterationSample";
+// class App extends Component {
+//   render() {
+//     return <IterationSample/>
+//   }
+// }
 
 // 5.3.2.2 App 컴포넌트에서 스크롤 박스 컴포넌트 렌더링
 // import ScrollBox from "./ ScrollBox";
